@@ -1,14 +1,14 @@
 # Ansible Role: TeamCity
 
-[![Build Status](https://travis-ci.org/fubarhouse/fubarhouse.teamcity.svg?branch=master)](https://travis-ci.org/fubarhouse/fubarhouse.teamcity)
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/fubarhouse/fubarhouse.teamcity/master/LICENSE)
+[![Build Status](https://travis-ci.org/fubarhouse/ansible-role-teamcity.svg?branch=master)](https://travis-ci.org/fubarhouse/ansible-role-teamcity)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/fubarhouse/ansible-role-teamcity/master/LICENSE)
 
 * Installs Java v7 on Ubuntu servers
 * Installs MySQL on Ubuntu servers
 * Installs Jetbrains' TeamCity on Ubuntu servers
 
 ## Preview
-![screenshot](https://raw.githubusercontent.com/fubarhouse/fubarhouse.teamcity/master/images/login-screen.png)
+![screenshot](https://raw.githubusercontent.com/fubarhouse/ansible-role-teamcity/master/images/login-screen.png)
 
 ## Requirements
 
