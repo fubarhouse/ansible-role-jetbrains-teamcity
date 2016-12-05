@@ -22,6 +22,7 @@
 - name: "Look for MySQL"
   shell: which mysql
   register: "which_mysql | grep mysql"
+  failed_when: false
 
 - name: "Include mysql connector tasks"
   include: tasks-mysql-connector.yml
