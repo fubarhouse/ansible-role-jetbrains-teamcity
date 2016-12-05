@@ -8,6 +8,19 @@
   tags:
     - teamcity
 
+- name: "Teamcity | Ensure directory is writable"
+  become: yes
+  become_user: root
+  file:
+    path: "{{ teamcity_install_dir }}"
+    state: directory
+    owner: "{{ fubarhouse_user }}"
+    group: "{{ fubarhouse_user }}"
+    mode: 0755
+    recurse: true
+  tags:
+  - teamcity
+
 - name: "Teamcity | Unpack distribution"
   become: yes
   become_user: root
