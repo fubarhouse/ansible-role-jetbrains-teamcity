@@ -13,7 +13,17 @@
   become_user: root
   unarchive:
     src: "/tmp/TeamCity-{{ teamcity_version }}.tar.gz"
-    dest: "/opt/teamcity"
+    dest: "{{ teamcity_install_dir }}"
     copy: "no"
+  tags:
+    - teamcity
+
+- name: "Teamcity | Setup port in configuration"
+  become: yes
+  become_user: root
+  replace:
+    dest: "{{ teamcity_install_dir }}/TeamCity/conf/server.xml"
+    regexp: "8111"
+    replace: "{{ teamcity_port }}"
   tags:
     - teamcity

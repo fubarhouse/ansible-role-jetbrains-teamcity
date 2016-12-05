@@ -4,17 +4,25 @@
 # General config - Unless you use your own configurations or have
 # forked this role, changing paths will break the role.
 
-  teamcity_install_dir: /opt/teamcity
-  teamcity_data_dir: /var/teamcity
-  teamcity_domain: teamcity.vagrant.dev
+teamcity_install_dir: /opt/teamcity
+teamcity_data_dir: /var/teamcity
+teamcity_domain: teamcity.vagrant.dev
+teamcity_port: 8112
 
 # Teamcity
 
-  teamcity_version: 10.0.1
-  teamcity_webserver: nginx
-  teamcity_db_user: teamcity
-  teamcity_db_user: 12345
+teamcity_version: 10.0.3
+teamcity_webserver: nginx
+teamcity_db_user: teamcity
+teamcity_db_user: 12345
 
 # MySQL Connector
 
-  connector_version: 5.1.39
+connector_version: 5.1.39
+
+# Virtual hosts
+fubarhouse_vhosts:
+  - name: Teamcity
+    docroot: "{{ teamcity_install_dir }}"
+    domain: "{{ teamcity_domain }}"
+    port: "{{ teamcity_port }}"
