@@ -15,5 +15,6 @@
     name: "{{ item }}"
     state: installed
   with_items:
+    - mysql
     - rsync
     - unzip
