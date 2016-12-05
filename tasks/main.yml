@@ -26,11 +26,11 @@
 
 - name: "Include mysql connector tasks"
   include: tasks-mysql-connector.yml
-  when: '"mysql" in "{{ which_mysql.stdout }}"'
+  when: "'mysql' not in which_mysql.stdout"
 
 - name: "Include mysql db tasks"
   include: tasks-mysql-db.yml
-  when: '"mysql" in "{{ which_mysql.stdout }}"'
+  when: "'mysql' not in which_mysql.stdout"
 
 - name: "TeamCity | Apache vhost tasks"
   shell: "echo 'notify apache handler'"
