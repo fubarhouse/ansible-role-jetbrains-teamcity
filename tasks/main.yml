@@ -20,8 +20,8 @@
   include: tasks-teamcity-service.yml
 
 - name: "Look for MySQL"
-  shell: which mysql
-  register: "which_mysql | grep mysql"
+  shell: "which mysql | grep mysql"
+  register: which_mysql
   failed_when: false
 
 - name: "Include mysql connector tasks"
