@@ -19,11 +19,17 @@
 - name: "Include teamcity service tasks"
   include: tasks-teamcity-service.yml
 
+- name: "Look for MySQL"
+  shell: which mysql
+  register: "which_mysql | grep mysql"
+
 - name: "Include mysql connector tasks"
   include: tasks-mysql-connector.yml
+  when: '"mysql" in "{{ which_mysql }}"'
 
 - name: "Include mysql db tasks"
   include: tasks-mysql-db.yml
+  when: '"mysql" in "{{ which_mysql }}"'
 
 - name: "TeamCity | Apache vhost tasks"
   shell: "echo 'notify apache handler'"
