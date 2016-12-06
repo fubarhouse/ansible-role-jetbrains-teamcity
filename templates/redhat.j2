@@ -28,9 +28,10 @@ case $1 in
     restart)
         su - $TEAMCITY_USER -c "TEAMCITY_DATA_PATH=$TEAMCITY_DATA_DIR $TEAMCITY_PATH stop"
         su - $TEAMCITY_USER -c "TEAMCITY_DATA_PATH=$TEAMCITY_DATA_DIR $TEAMCITY_PATH start"
+        ;;
     *)
         echo "Usage: $0 {start|stop|restart}"
         exit 1
-    ;;
+        ;;
 esac
 exit 0
