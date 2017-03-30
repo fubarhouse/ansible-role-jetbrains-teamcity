@@ -20,7 +20,7 @@
     teamcity_version: 10.0.1
     teamcity_webserver: nginx
     teamcity_db_user: teamcity
-    teamcity_db_user: 12345
+    teamcity_db_passw: 12345
 
 ## Dependencies
 
