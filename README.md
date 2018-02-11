@@ -1,7 +1,9 @@
 # Ansible Role: TeamCity
 
-[![Build Status](https://travis-ci.org/fubarhouse/ansible-role-teamcity.svg?branch=master)](https://travis-ci.org/fubarhouse/ansible-role-teamcity)
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/fubarhouse/ansible-role-teamcity/master/LICENSE)
+[![Build Status](https://img.shields.io/travis/fubarhouse/ansible-role-jetbrains-teamcity/master.svg?style=for-the-badge)](https://travis-ci.org/fubarhouse/ansible-role-jetbrains-teamcity)
+[![stability-stable](https://img.shields.io/badge/stability-stable-green.svg?style=for-the-badge)](https://github.com/orangemug/stability-badges)
+[![Ansible Galaxy](https://img.shields.io/ansible/role/14002.svg?style=for-the-badge)](https://galaxy.ansible.com/fubarhouse/jetbrains-teamcity)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)](https://raw.githubusercontent.com/fubarhouse/ansible-role-teamcity/master/LICENSE)
 
 * Installs Java v7 on Ubuntu servers
 * Installs MySQL on Ubuntu servers
