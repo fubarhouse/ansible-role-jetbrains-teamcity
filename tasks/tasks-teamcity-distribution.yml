@@ -9,8 +9,6 @@
     - teamcity
 
 - name: "Teamcity | Ensure directory is writable"
-  become: yes
-  become_user: root
   file:
     path: "{{ teamcity_install_dir }}"
     state: directory
@@ -20,8 +18,6 @@
   - teamcity
 
 - name: "Teamcity | Unpack distribution"
-  become: yes
-  become_user: root
   unarchive:
     src: "/tmp/TeamCity-{{ teamcity_version }}.tar.gz"
     dest: "{{ teamcity_install_dir }}"
@@ -30,8 +26,6 @@
     - teamcity
 
 - name: "Teamcity | Setup port in configuration"
-  become: yes
-  become_user: root
   replace:
     dest: "{{ teamcity_install_dir }}/TeamCity/conf/server.xml"
     regexp: "8111"

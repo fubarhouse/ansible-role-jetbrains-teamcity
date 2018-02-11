@@ -1,23 +1,17 @@
 ---
 
 - name: "Config | Set environment"
-  become: yes
-  become_user: root
   lineinfile:
     dest: /etc/environment
     regexp: 'TEAMCITY_DATA_PATH="{{ teamcity_data_dir }}/buildserver"'
     line: 'TEAMCITY_DATA_PATH="{{ teamcity_data_dir }}/buildserver"'
 
 - name: "Config | Create user group"
-  become: yes
-  become_user: root
   group:
     name: teamcity
     state: present
 
 - name: "Config | Add users"
-  become: yes
-  become_user: root
   user:
     name: teamcity
     shell: /bin/false
@@ -25,8 +19,6 @@
     group: teamcity
 
 - name: "Config | Create directories"
-  become: yes
-  become_user: root
   file:
     path: "{{ item }}"
     state: directory

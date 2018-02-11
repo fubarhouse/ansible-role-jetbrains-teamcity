@@ -1,13 +1,9 @@
 ---
 
 - name: "TeamCity | Stop service"
-  become: yes
-  become_user: root
   shell: "{{ teamcity_install_dir }}/TeamCity/bin/teamcity-server.sh stop"
 
 - name: "Teamcity | Uninstall"
-  become: yes
-  become_user: root
   file:
     path: "{{ item }}"
     state: absent
