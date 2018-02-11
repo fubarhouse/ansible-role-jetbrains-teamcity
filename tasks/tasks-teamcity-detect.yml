@@ -6,5 +6,5 @@
   register: config_file
 
 - name: "Teamcity | Get version"
-  shell: 'curl localhost:8111 | grep TeamCity | grep build | cut -d " " -f10'
+  shell: "curl localhost:{{ teamcity_port }} | grep TeamCity | grep build | cut -d\" -f10"
   register: teamcity_installed_version
