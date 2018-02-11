@@ -14,7 +14,7 @@
 
 ## Requirements
 
-  * [geerlingguy.java](https://github.com/geerlingguy/ansible-role-java)
+  Java 8 or later.
 
 ## Role Variables
 
