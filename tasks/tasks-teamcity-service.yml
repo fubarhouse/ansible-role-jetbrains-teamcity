@@ -1,9 +1,13 @@
 ---
 
+- name: "TeamCity | Service | Get status"
+  shell: '"{{ teamcity_install_dir }}/TeamCity/bin/teamcity-server.sh" status'
+  register: teamcity_status_service
+
 - name: "TeamCity | Service | Stop"
   shell: '"{{ teamcity_install_dir }}/TeamCity/bin/teamcity-server.sh" stop'
 
 - name: "TeamCity | Service | Start"
   shell: '"{{ teamcity_install_dir }}/TeamCity/bin/teamcity-server.sh" start'
   register: teamcity_status
-  failed_when: '"Tomcat started." not in "{{ teamcity_status.stdout }}"'
+  failed_when: "Tomcat started." not in teamcity_status.stdout
