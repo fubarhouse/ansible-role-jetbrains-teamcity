@@ -2,7 +2,7 @@
 
 - name: "Teamcity | Detect installation"
   stat:
-    path: "/opt/teamcity/TeamCity/webapps/ROOT/WEB-INF/buildServerConfigurator.xml"
+    path: "{{ teamcity_install_dir }}/BUILD_{{ teamcity_version_build }}"
   register: config_file
 
 - name: "Teamcity | Get version"
