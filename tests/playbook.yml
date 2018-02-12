@@ -3,4 +3,4 @@
 - hosts: all
   sudo: true
   roles:
-    - ../../JetBrains-TeamCity
+    - role_under_test
