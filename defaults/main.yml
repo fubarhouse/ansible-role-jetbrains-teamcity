@@ -1,9 +1,6 @@
 ---
 # defaults file for sa-teamcity
 
-# General config - Unless you use your own configurations or have
-# forked this role, changing paths will break the role.
-
 teamcity_install_dir: /opt/teamcity
 teamcity_data_dir: /var/teamcity
 teamcity_domain: teamcity.vagrant.dev
@@ -11,7 +8,7 @@ teamcity_port: 8112
 
 # Teamcity
 
-teamcity_version: 10.0.3
+teamcity_version: 2017.2.2
 teamcity_db_user: teamcity
 teamcity_db_passw: 12345
 
