@@ -29,7 +29,7 @@
 
 - name: "Teamcity | Setup port in configuration"
   replace:
-    dest: "{{ teamcity_install_dir }}/TeamCity/conf/server.xml"
+    dest: "{{ teamcity_install_dir }}/conf/server.xml"
     regexp: "8111"
     replace: "{{ teamcity_port }}"
   changed_when: false
