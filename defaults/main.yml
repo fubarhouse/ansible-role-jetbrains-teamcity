@@ -8,7 +8,8 @@ teamcity_port: 8112
 
 # Teamcity
 
-teamcity_version: 2017.2.2
+teamcity_version: 2017.4
+teamcity_version_build: 39406
 teamcity_db_user: teamcity
 teamcity_db_passw: 12345
 
