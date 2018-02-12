@@ -2,6 +2,7 @@
 
 - name: "TeamCity | Stop service"
   shell: "{{ teamcity_install_dir }}/TeamCity/bin/teamcity-server.sh stop"
+  failed_when: false
 
 - name: "Teamcity | Uninstall"
   file:
