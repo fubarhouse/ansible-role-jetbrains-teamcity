@@ -33,5 +33,6 @@
     regexp: "8111"
     replace: "{{ teamcity_port }}"
   changed_when: false
+  failed_when: false
   tags:
     - teamcity
