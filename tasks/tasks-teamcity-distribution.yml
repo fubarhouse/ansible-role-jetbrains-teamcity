@@ -3,7 +3,7 @@
 - name: "Teamcity | Get distribution"
   get_url:
     url: "https://download.jetbrains.com/charisma/youtrack-{{ teamcity_version }}.{{ teamcity_version_build }}.zip"
-    dest: "/tmp/TeamCity-{{ teamcity_version }}.{{ teamcity_version_build }}.tar.gz"
+    dest: "/tmp/TeamCity-{{ teamcity_version }}.{{ teamcity_version_build }}.zip"
     validate_certs: no
   tags:
     - teamcity
@@ -20,7 +20,7 @@
 
 - name: "Teamcity | Unpack distribution"
   unarchive:
-    src: "/tmp/TeamCity-{{ teamcity_version }}.tar.gz"
+    src: "/tmp/TeamCity-{{ teamcity_version }}.{{ teamcity_version_build }}.zip"
     dest: "{{ teamcity_install_dir }}"
     copy: "no"
   changed_when: false
