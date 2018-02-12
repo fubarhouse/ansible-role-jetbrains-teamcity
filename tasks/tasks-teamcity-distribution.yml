@@ -14,6 +14,7 @@
     state: directory
     mode: 0755
     recurse: true
+  changed_when: false
   tags:
   - teamcity
 
@@ -22,6 +23,7 @@
     src: "/tmp/TeamCity-{{ teamcity_version }}.tar.gz"
     dest: "{{ teamcity_install_dir }}"
     copy: "no"
+  changed_when: false
   tags:
     - teamcity
 
@@ -30,5 +32,6 @@
     dest: "{{ teamcity_install_dir }}/TeamCity/conf/server.xml"
     regexp: "8111"
     replace: "{{ teamcity_port }}"
+  changed_when: false
   tags:
     - teamcity

@@ -8,3 +8,4 @@
 - name: "Teamcity | Get version"
   shell: "curl localhost:{{ teamcity_port }} | grep TeamCity | grep build | cut -d '\"' -f10"
   register: teamcity_installed_version
+  changed_when: false

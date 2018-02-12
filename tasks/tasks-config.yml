@@ -26,16 +26,11 @@
     group: teamcity
     mode: 0777
     recurse: true
+  changed_when: false
   with_items:
     - "{{ teamcity_data_dir }}"
-    - "{{ teamcity_data_dir }}/buildserver"
-    - "{{ teamcity_data_dir }}/buildserver/lib"
-    - "{{ teamcity_data_dir }}/buildserver/lib/jdbc"
     - "/opt/teamcity"
     - "/opt/teamcity/TeamCity"
-    - "/opt/teamcity/TeamCity/webapps"
-    - "/opt/teamcity/TeamCity/webapps/ROOT"
-    - "/opt/teamcity/TeamCity/webapps/ROOT/WEB-INF"
 
 - name: "Config | Include OS-specific tasks for Debian/Ubuntu"
   include: tasks-config-debian.yml

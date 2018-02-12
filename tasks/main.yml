@@ -24,6 +24,7 @@
 - name: "Look for MySQL"
   shell: "which mysql | grep mysql"
   register: which_mysql
+  changed_when: false
   failed_when: false
 
 - name: "Include mysql connector tasks"
