@@ -10,4 +10,3 @@
   with_items:
     - "{{ teamcity_data_dir }}/TeamCity"
     - "{{ teamcity_data_dir }}/buildserver/lib/jdbc/"
-  when: teamcity_installed_version.stdout != teamcity_version
