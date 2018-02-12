@@ -16,16 +16,16 @@
 
 - name: "Include clean-up tasks"
   include: tasks-teamcity-clean.yml
-  when:
-    - teamcity_installed_version.stdout != teamcity_version
-    - config_file.stat.exists == "true"
+  when: config_file.stat.exists|bool == false
 
 - name: "Include teamcity distribution tasks"
   include: tasks-teamcity-distribution.yml
+  when: config_file.stat.exists|bool == false
 
 - name: "Include config tasks"
   include: tasks-config.yml
+  when: config_file.stat.exists|bool == false
 
 - name: "Include teamcity service tasks"
   include: tasks-teamcity-service.yml
-
+  when: config_file.stat.exists|bool == false
