@@ -33,13 +33,3 @@
 - name: "Include mysql db tasks"
   include: tasks-mysql-db.yml
   when: "'mysql' in which_mysql.stdout"
-
-- name: "TeamCity | Apache vhost tasks"
-  shell: "echo 'notify apache handler'"
-  notify: vhosts-apache
-  when: fubarhouse_webserver is defined and fubarhouse_webserver == 'apache2'
-
-- name: "TeamCity | NGINX vhost tasks"
-  shell: "echo 'notify nginx handler'"
-  notify: vhosts-nginx
-  when: fubarhouse_webserver is defined and fubarhouse_webserver == 'nginx'
