@@ -11,3 +11,4 @@
 
 - name: "Config | Install intialization script"
   shell: update-rc.d teamcity defaults
+  changed_when: false

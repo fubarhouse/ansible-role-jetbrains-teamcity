@@ -11,3 +11,4 @@
 
 - name: "Config | Install intialization script"
   shell: chkconfig teamcity on
+  changed_when: false
