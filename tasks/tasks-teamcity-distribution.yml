@@ -2,8 +2,8 @@
 
 - name: "Teamcity | Get distribution"
   get_url:
-    url: "http://download.jetbrains.com/teamcity/TeamCity-{{ teamcity_version }}.tar.gz"
-    dest: "/tmp/TeamCity-{{ teamcity_version }}.tar.gz"
+    url: "https://download.jetbrains.com/charisma/youtrack-{{ teamcity_version }}.{{ teamcity_version_build }}.zip"
+    dest: "/tmp/TeamCity-{{ teamcity_version }}.{{ teamcity_version_build }}.tar.gz"
     validate_certs: no
   tags:
     - teamcity
