@@ -18,9 +18,6 @@
 - name: "Include config tasks"
   include: tasks-config.yml
 
-- name: "Include database tasks"
-  include: tasks-mysql.yml
-
 - name: "Include teamcity service tasks"
   include: tasks-teamcity-service.yml
 
