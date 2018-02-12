@@ -3,8 +3,4 @@
 - hosts: all
   sudo: true
   roles:
-    - geerlingguy.git
-#    - geerlingguy.mysql
-    - fubarhouse.commons
-    - fubarhouse.curl
     - role_under_test
