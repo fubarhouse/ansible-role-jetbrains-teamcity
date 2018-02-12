@@ -11,5 +11,6 @@
     name: "{{ item }}"
     state: installed
   with_items:
+    - curl
     - rsync
     - unzip
