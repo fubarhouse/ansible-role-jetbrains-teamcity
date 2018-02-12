@@ -38,5 +38,4 @@ galaxy_info:
   - development
   - system
   - web
-dependencies:
-  - geerlingguy.java
+dependencies: []
