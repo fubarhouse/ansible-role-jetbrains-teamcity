@@ -30,7 +30,6 @@
   with_items:
     - "{{ teamcity_data_dir }}"
     - "/opt/teamcity"
-    - "/opt/teamcity/TeamCity"
 
 - name: "Config | Include OS-specific tasks for Debian/Ubuntu"
   include: tasks-config-debian.yml
