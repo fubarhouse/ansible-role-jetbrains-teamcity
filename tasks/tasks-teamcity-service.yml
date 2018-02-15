@@ -1,11 +1,11 @@
 ---
 
 - name: "TeamCity | Service | Stop"
-  shell: '"{{ teamcity_install_dir }}/TeamCity/bin/teamcity-server.sh" stop'
+  shell: '"{{ teamcity_install_dir }}/bin/teamcity-server.sh" stop'
   changed_when: false
 
 - name: "TeamCity | Service | Start"
-  shell: '"{{ teamcity_install_dir }}/TeamCity/bin/teamcity-server.sh" start'
+  shell: '"{{ teamcity_install_dir }}/bin/teamcity-server.sh" start'
   register: teamcity_status
   changed_when: false
   failed_when: false
