@@ -28,4 +28,6 @@
 
 - name: "Include teamcity service tasks"
   include: tasks-teamcity-service.yml
-  when: config_file.stat.exists|bool == false
+  when:
+    - config_file.stat.exists|bool == false
+    - teamcity_service_desired_status|bool == false
