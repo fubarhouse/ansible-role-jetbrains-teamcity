@@ -30,4 +30,4 @@
   include: tasks-teamcity-service.yml
   when:
     - config_file.stat.exists|bool == false
-    - teamcity_service_desired_status|bool == false
+    - teamcity_service_desired_status|bool == true
