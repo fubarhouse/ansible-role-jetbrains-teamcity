@@ -2,5 +2,7 @@
 
 - hosts: all
   sudo: true
+  vars:
+    teamcity_service_desired_status: false
   roles:
     - role_under_test
