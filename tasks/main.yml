@@ -4,7 +4,7 @@
   include: tasks-initial.yml
 
 - name: Ensure a valid version and build is configured.
-  shell: "curl -I https://download.jetbrains.com/charisma/youtrack-{{ teamcity_version }}.{{ teamcity_version_build }}.zip"
+  shell: "curl -I https://download.jetbrains.com/charisma/teamcity-{{ teamcity_version }}.{{ teamcity_version_build }}.zip"
   register: curl_teamcity_zip
   changed_when: false
   failed_when:

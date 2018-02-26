@@ -2,5 +2,5 @@
 
 - name: "Teamcity | Detect installation"
   stat:
-    path: "{{ teamcity_install_dir }}/BUILD_{{ teamcity_version_build }}"
+    path: "{{ teamcity_parent_install_dir }}/TeamCity/BUILD_{{ teamcity_version_build }}"
   register: config_file

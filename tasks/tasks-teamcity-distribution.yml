@@ -2,35 +2,27 @@
 
 - name: "Teamcity | Get distribution"
   get_url:
-    url: "https://download.jetbrains.com/charisma/youtrack-{{ teamcity_version }}.{{ teamcity_version_build }}.zip"
-    dest: "/tmp/TeamCity-{{ teamcity_version }}.{{ teamcity_version_build }}.zip"
+    url: "https://download.jetbrains.com/teamcity/TeamCity-{{ teamcity_version }}.tar.gz"
+    dest: "/tmp/TeamCity-{{ teamcity_version }}.tar.gz"
     validate_certs: no
   tags:
     - teamcity
 
-- name: "Teamcity | Ensure directory is writable"
-  file:
-    path: "{{ teamcity_install_dir }}"
-    state: directory
-    mode: 0755
-    recurse: true
-  changed_when: false
-  tags:
-  - teamcity
-
 - name: "Teamcity | Unpack distribution"
   unarchive:
-    src: "/tmp/TeamCity-{{ teamcity_version }}.{{ teamcity_version_build }}.zip"
-    dest: "{{ teamcity_install_dir }}"
-    extra_opts: "--strip-components=1"
+    src: "/tmp/TeamCity-{{ teamcity_version }}.tar.gz"
+    dest: "/tmp/"
     copy: "no"
   changed_when: false
   tags:
     - teamcity
 
+- name: "Teamcity | Move distribution"
+  shell: "mv /tmp/TeamCity/ {{ teamcity_parent_install_dir }}"
+
 - name: "Teamcity | Setup port in configuration"
   replace:
-    dest: "{{ teamcity_install_dir }}/conf/server.xml"
+    dest: "{{ teamcity_parent_install_dir }}/TeamCity/conf/server.xml"
     regexp: "8111"
     replace: "{{ teamcity_port }}"
   changed_when: false

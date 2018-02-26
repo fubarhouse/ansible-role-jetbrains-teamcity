@@ -1,7 +1,7 @@
 ---
 
 - name: "TeamCity | Stop service"
-  shell: "{{ teamcity_install_dir }}/bin/teamcity-server.sh stop"
+  shell: "{{ teamcity_parent_install_dir }}/TeamCity/bin/teamcity-server.sh stop"
   failed_when: false
 
 - name: "Teamcity | Uninstall"
@@ -9,5 +9,4 @@
     path: "{{ item }}"
     state: absent
   with_items:
-    - "{{ teamcity_data_dir }}/TeamCity"
-    - "{{ teamcity_data_dir }}/buildserver/lib/jdbc/"
+    - "{{ teamcity_data_dir }}"
