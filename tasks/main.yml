@@ -10,6 +10,8 @@
   failed_when:
     - '"200 OK" not in curl_teamcity_zip.stdout'
     - '"302 Moved Temporarily" not in curl_teamcity_zip.stdout'
+    - '"HTTP/2 200" not in curl_teamcity_zip.stdout'
+    - '"HTTP/2 302" not in curl_teamcity_zip.stdout'
 
 - name: "Include detection tasks"
   include: tasks-teamcity-detect.yml
