@@ -4,5 +4,6 @@
   sudo: true
   vars:
     teamcity_service_desired_status: false
+    teamcity_version_validation: false
   roles:
     - role_under_test

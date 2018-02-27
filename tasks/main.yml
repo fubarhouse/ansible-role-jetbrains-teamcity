@@ -12,6 +12,7 @@
     - '"302 Moved Temporarily" not in curl_teamcity_zip.stdout'
     - '"HTTP/2 200" not in curl_teamcity_zip.stdout'
     - '"HTTP/2 302" not in curl_teamcity_zip.stdout'
+  when: teamcity_version_validation|bool == true
 
 - name: "Include detection tasks"
   include: tasks-teamcity-detect.yml

@@ -6,4 +6,5 @@ teamcity_data_dir: /var/teamcity
 teamcity_port: 8112
 teamcity_version: 2017.2.2
 teamcity_version_build: 50909
+teamcity_version_validation: true
 teamcity_service_desired_status: true
